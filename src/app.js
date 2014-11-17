@@ -5,8 +5,8 @@ var mongoose = require('mongoose');
 var path = require('path');
 var session = require('express-session');
 var RedisStore = require('connect-redis')(session);
+var url = require('url');
 
-// fix url?
 var dbURL = process.env.MONGOHQ_URL || 'mongodb://localhost/mvcdb';
 
 var db = mongoose.connect(dbURL, function(err) {
